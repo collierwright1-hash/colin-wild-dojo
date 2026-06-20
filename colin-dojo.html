@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Wild Dojo — Colin's Movement Path</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Wild Dojo">
+<meta name="theme-color" content="#101218">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  :root{
+    --ink:#0E0F14;
+    --ink-2:#161922;
+    --ink-3:#1F2430;
+    --line:#2C3340;
+    --paper:#ECE4D1;
+    --paper-ink:#2A2620;
+    --paper-line:#C9BCA0;
+    --text:#ECE7DA;
+    --text-dim:#9AA0AC;
+    --ember-a:#FF7A3C;
+    --ember-b:#F7411E;
+    /* style elements */
+    --bear:#D49A36;
+    --crab:#1F9EB0;
+    --ape:#5FA85B;
+    --crane:#9A6DD7;
+    --flow:#F2C13D;
+    --iron:#8A93A3;
+    --accent:var(--ember-a);
+    --radius:16px;
+    --font-display:"Futura","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+    --font-lore:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --font-ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(900px 500px at 50% -10%, rgba(255,122,60,.10), transparent 60%),
+      radial-gradient(700px 600px at 100% 100%, rgba(154,109,215,.08), transparent 60%),
+      var(--ink);
+    color:var(--text);
+    font-family:var(--font-ui);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.45;
+    min-height:100vh;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:18px 16px 110px}
+
+  /* ---------- Header / rank seal ---------- */
+  header{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+  .seal{flex:0 0 auto;width:74px;height:74px;position:relative}
+  .seal svg{display:block}
+  .seal .rank-abbr{
+    position:absolute;inset:0;display:grid;place-items:center;
+    font-family:var(--font-display);font-weight:800;font-size:13px;letter-spacing:.5px;
+    color:var(--text);text-transform:uppercase;
+  }
+  .titles h1{
+    margin:0;font-family:var(--font-display);font-weight:800;
+    font-size:clamp(20px,5.5vw,28px);letter-spacing:1.5px;text-transform:uppercase;
+    background:linear-gradient(90deg,#fff,#FFD9B0 60%,var(--ember-a));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .titles .rank-line{font-size:13px;color:var(--text-dim);margin-top:2px}
+  .titles .rank-line b{color:var(--text);font-weight:600}
+
+  /* ---------- Streak banner ---------- */
+  .streak{
+    margin:14px 0 18px;display:flex;align-items:center;gap:14px;
+    background:linear-gradient(180deg,var(--ink-2),var(--ink-3));
+    border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+  }
+  .flame{
+    font-size:34px;line-height:1;filter:drop-shadow(0 0 10px rgba(255,90,30,.55));
+    transition:transform .25s ease;
+  }
+  .flame.dim{filter:grayscale(1) brightness(.7);opacity:.5}
+  .streak-meta{flex:1}
+  .streak-meta .big{font-family:var(--font-display);font-weight:800;font-size:22px;letter-spacing:.5px}
+  .streak-meta .sub{font-size:12.5px;color:var(--text-dim)}
+  .focus-btn{
+    border:0;cursor:pointer;font-family:var(--font-display);font-weight:800;letter-spacing:.6px;
+    text-transform:uppercase;font-size:13px;color:#2a1300;border-radius:12px;padding:12px 16px;
+    background:linear-gradient(180deg,var(--ember-a),var(--ember-b));
+    box-shadow:0 6px 18px rgba(247,65,30,.35);transition:transform .12s ease,filter .12s ease;
+  }
+  .focus-btn:hover{filter:brightness(1.06)}
+  .focus-btn:active{transform:translateY(1px)}
+  .focus-btn[disabled]{filter:grayscale(.6) brightness(.8);cursor:default;box-shadow:none}
+
+  /* ---------- Tabs ---------- */
+  nav.tabs{
+    position:fixed;left:0;right:0;bottom:0;z-index:30;
+    display:flex;justify-content:center;gap:4px;
+    background:linear-gradient(180deg,rgba(14,15,20,.4),var(--ink) 40%);
+    padding:8px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);
+  }
+  nav.tabs button{
+    flex:1;max-width:130px;border:0;background:transparent;color:var(--text-dim);
+    font-family:var(--font-ui);font-size:11px;font-weight:600;letter-spacing:.3px;
+    display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 4px;cursor:pointer;
+    border-radius:10px;text-transform:uppercase;
+  }
+  nav.tabs button .ic{font-size:19px;line-height:1}
+  nav.tabs button.active{color:var(--text);background:var(--ink-3)}
+
+  .view{display:none}
+  .view.active{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  .section-title{
+    font-family:var(--font-display);font-weight:800;text-transform:uppercase;letter-spacing:1px;
+    font-size:14px;color:var(--text-dim);margin:22px 2px 12px;display:flex;align-items:center;gap:8px;
+  }
+  .section-title::after{content:"";height:1px;flex:1;background:var(--line)}
+
+  /* ---------- Style cards ---------- */
+  .styles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:480px){.styles{grid-template-columns:1fr}}
+  .style-card{
+    text-align:left;cursor:pointer;border:1px solid var(--line);border-left:4px solid var(--accent);
+    background:linear-gradient(180deg,var(--ink-2),var(--ink-3));border-radius:14px;padding:14px;
+    color:var(--text);transition:transform .12s ease,border-color .12s ease;
+  }
+  .style-card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .style-card .animal{font-size:26px}
+  .style-card .sname{font-family:var(--font-display);font-weight:800;letter-spacing:.4px;font-size:15px;margin-top:4px}
+  .style-card .way{font-size:11.5px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.6px}
+  .style-card .trains{font-size:12px;color:var(--text-dim);margin:8px 0 10px;min-height:30px}
+  .pips{display:flex;gap:5px}
+  .pip{width:100%;height:7px;border-radius:6px;background:#2b3140}
+  .pip.done{background:var(--accent);box-shadow:0 0 8px color-mix(in srgb,var(--accent) 60%,transparent)}
+  .style-card .count{font-size:11px;color:var(--text-dim);margin-top:8px}
+  .crest-done{color:var(--accent);font-weight:700}
+
+  /* ---------- Flows ---------- */
+  .flow-card{
+    border:1px solid var(--line);background:var(--ink-2);border-radius:14px;padding:14px;margin-bottom:10px;
+    display:flex;gap:12px;align-items:center
+  }
+  .flow-card .fi{font-size:24px;flex:0 0 auto}
+  .flow-card .fname{font-family:var(--font-display);font-weight:800;letter-spacing:.4px}
+  .flow-card .fdesc{font-size:12.5px;color:var(--text-dim)}
+  .flow-card.locked{opacity:.55}
+  .badge{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+    padding:3px 8px;border-radius:20px;border:1px solid var(--line);color:var(--text-dim);white-space:nowrap}
+  .badge.open{color:var(--flow);border-color:var(--flow)}
+  .badge.got{background:linear-gradient(180deg,var(--ember-a),var(--ember-b));color:#2a1300;border:0}
+
+  /* ---------- Sessions ---------- */
+  .scroll{
+    background:var(--paper);color:var(--paper-ink);border-radius:14px;padding:18px 18px 16px;
+    font-family:var(--font-lore);margin-bottom:14px;border:1px solid var(--paper-line);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);
+  }
+  .scroll h3{font-family:var(--font-display);text-transform:uppercase;letter-spacing:1px;margin:0 0 4px;font-size:15px}
+  .scroll .tag{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#7a6f59;font-family:var(--font-ui)}
+  .scroll ol,.scroll ul{margin:10px 0 0;padding-left:20px}
+  .scroll li{margin:5px 0}
+  .scroll .when{display:inline-block;background:var(--paper-ink);color:var(--paper);font-family:var(--font-ui);
+    font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:.4px}
+  .week{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 16px}
+  .day{flex:1;min-width:64px;text-align:center;border:1px solid var(--line);border-radius:10px;padding:8px 4px;background:var(--ink-2)}
+  .day .dn{font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px}
+  .day .dt{font-size:12px;font-weight:700;margin-top:3px}
+  .day.train{border-color:var(--ember-a)}
+  .day.climb{border-color:var(--crab)}
+
+  /* ---------- Grown-ups ---------- */
+  .panel{background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+  .panel h3{margin:0 0 8px;font-size:15px;font-family:var(--font-display);letter-spacing:.5px;text-transform:uppercase}
+  .panel p{font-size:13.5px;color:#c7ccd6;margin:8px 0}
+  .panel ul{font-size:13.5px;color:#c7ccd6;margin:8px 0;padding-left:20px}
+  .panel li{margin:5px 0}
+  .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .gbtn{border:1px solid var(--line);background:var(--ink-3);color:var(--text);border-radius:10px;
+    padding:10px 14px;font-weight:600;font-size:13px;cursor:pointer}
+  .gbtn:hover{border-color:var(--ember-a)}
+  .gbtn.warn:hover{border-color:#e0556e}
+
+  /* ---------- Modal ---------- */
+  .scrim{position:fixed;inset:0;background:rgba(6,7,10,.72);backdrop-filter:blur(3px);
+    display:none;align-items:flex-end;justify-content:center;z-index:50;padding:0}
+  .scrim.open{display:flex}
+  .sheet{
+    width:100%;max-width:760px;background:linear-gradient(180deg,var(--ink-2),var(--ink));
+    border-top:3px solid var(--accent);border-radius:20px 20px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom));
+    max-height:90vh;overflow:auto;animation:slideup .28s cubic-bezier(.2,.8,.2,1)
+  }
+  @media(min-width:620px){.scrim{align-items:center}.sheet{border-radius:20px;border:1px solid var(--line);border-top:3px solid var(--accent)}}
+  @keyframes slideup{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+  .sheet .close{float:right;border:0;background:var(--ink-3);color:var(--text);width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer}
+  .sheet .eyebrow{font-size:11.5px;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700}
+  .sheet h2{margin:4px 0 2px;font-family:var(--font-display);letter-spacing:.5px;font-size:21px}
+  .sheet .real{font-size:13px;color:var(--text-dim);font-style:italic;margin-bottom:12px}
+  .formlist{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+  .formrow{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;background:var(--ink-2)}
+  .formrow.locked{opacity:.5;cursor:default}
+  .formrow .fnum{font-family:var(--font-display);font-weight:800;font-size:13px;color:var(--accent);flex:0 0 38px}
+  .formrow .ftitle{font-weight:700;font-size:14px}
+  .formrow .fmeta{font-size:12px;color:var(--text-dim)}
+  .formrow .state{margin-left:auto;font-size:20px}
+  .mini-pips{display:flex;gap:3px;margin-top:5px}
+  .mini-pips i{width:14px;height:5px;border-radius:4px;background:#2b3140;display:block}
+  .mini-pips i.on{background:var(--accent)}
+
+  /* form detail */
+  .fd .cue{background:var(--ink-3);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:10px;padding:12px;font-size:13.5px;margin:12px 0}
+  .fd .cue b{color:var(--accent)}
+  .fd .target{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+  .fd .target div{background:var(--ink-3);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:12.5px}
+  .fd .target b{font-family:var(--font-display);font-size:15px;display:block;color:var(--text)}
+  .fd .progress{margin:14px 0 6px}
+  .bar{height:12px;border-radius:8px;background:var(--ink-3);overflow:hidden;border:1px solid var(--line)}
+  .bar>span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#fff);transition:width .4s ease}
+  .practice-btn{width:100%;margin-top:14px;border:0;cursor:pointer;border-radius:12px;padding:15px;
+    font-family:var(--font-display);font-weight:800;letter-spacing:.8px;text-transform:uppercase;font-size:15px;
+    color:#2a1300;background:linear-gradient(180deg,var(--accent),color-mix(in srgb,var(--accent) 60%,#000));
+    box-shadow:0 6px 18px color-mix(in srgb,var(--accent) 40%,transparent)}
+  .practice-btn:active{transform:translateY(1px)}
+  .mastered-note{text-align:center;margin-top:14px;font-family:var(--font-display);letter-spacing:1px;color:var(--accent);text-transform:uppercase;font-size:14px}
+
+  /* toast */
+  #toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);
+    background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--accent);
+    color:var(--text);padding:12px 18px;border-radius:14px;font-weight:600;font-size:13.5px;
+    opacity:0;pointer-events:none;transition:all .3s ease;z-index:60;text-align:center;max-width:90%}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .hint{font-size:12px;color:var(--text-dim);background:var(--ink-2);border:1px dashed var(--line);
+    border-radius:10px;padding:10px 12px;margin:10px 0}
+
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="seal" id="seal"></div>
+    <div class="titles">
+      <h1>The Wild Dojo</h1>
+      <div class="rank-line">Rank: <b id="rankName">Sprout</b> · <span id="xpLine">0 XP</span></div>
+    </div>
+  </header>
+
+  <div class="streak">
+    <div class="flame" id="flame">🔥</div>
+    <div class="streak-meta">
+      <div class="big"><span id="streakNum">0</span>-day streak</div>
+      <div class="sub" id="streakSub">Do your Total Focus to light the flame.</div>
+    </div>
+    <button class="focus-btn" id="focusBtn">Total Focus</button>
+  </div>
+
+  <!-- DOJO -->
+  <section class="view active" id="view-dojo">
+    <div class="section-title">Move of the Week</div>
+    <div class="flow-card" id="motw"></div>
+    <div class="section-title">Breathing Styles</div>
+    <div class="styles" id="styleGrid"></div>
+  </section>
+
+  <!-- FLOWS -->
+  <section class="view" id="view-flows">
+    <div class="section-title">Flows to Unlock</div>
+    <p class="hint">Master the forms a flow needs, then chain them into one smooth sequence. Flows are the rarest techniques in the dojo.</p>
+    <div id="flowList"></div>
+  </section>
+
+  <!-- SESSIONS -->
+  <section class="view" id="view-sessions">
+    <div class="section-title">Your Week</div>
+    <div class="week" id="weekStrip"></div>
+    <div id="sessionPlans"></div>
+  </section>
+
+  <!-- GROWN-UPS -->
+  <section class="view" id="view-grown">
+    <div class="section-title">For Grown-Ups</div>
+    <div class="panel">
+      <h3>How the program works</h3>
+      <p>An Animal Flow practice built for an 11-year-old climber, themed as a martial-arts "breathing styles" game. Five styles, each a real Animal Flow movement family. The first two Forms of every style are open from day one (so there's always variety); the harder Forms 3–5 unlock as he masters the one before. Mastering a Form takes a set number of <b>separate days</b> of practice — tapping "I practiced this" counts once per day, which rewards showing up consistently and keeps daily volume light on the joints. Mastered forms chain into Flows.</p>
+      <ul>
+        <li><b>Every day (~5 min):</b> Total Focus ritual — wrist prep, a few slow breaths, and the week's featured Form. Builds the streak.</li>
+        <li><b>Tue &amp; Sat (~15–20 min):</b> a full Training Session across 2–3 styles plus a flow and a grip finisher.</li>
+        <li><b>Wed:</b> climbing day — the dojo just nudges a few focus breaths at the wall.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Joint-stability first (hypermobility note)</h3>
+      <p>Every cue favors <b>active, stacked control</b> over end-range. Throughout you'll see "soft elbows / don't lock," "stack your joints," and "press the floor away — don't sink." Holds are closed-chain activations (Beast, Crab) that teach the joints to stabilize rather than hang on ligaments. Hangs are <b>active</b> (shoulders engaged), never passive dead hangs. Deep passive stretching is intentionally left out.</p>
+    </div>
+    <div class="panel">
+      <h3>Save &amp; back up progress</h3>
+      <p>Progress is stored on this device. Use Export to save a backup file, or to move it to another device. The Google Sheet sync is the next add-on (see below).</p>
+      <div class="row">
+        <button class="gbtn" id="exportBtn">⬇ Export progress</button>
+        <button class="gbtn" id="importBtn">⬆ Import progress</button>
+        <button class="gbtn warn" id="resetBtn">↺ Reset everything</button>
+      </div>
+      <input type="file" id="importFile" accept="application/json" hidden>
+      <p class="hint" style="margin-top:12px"><b>Next step — Google Sheet tracking:</b> this build is ready to send each completed session to a Google Sheet via an Apps Script web-app URL (no IDE needed). The hook is wired in the code (<code>SHEET_WEBAPP_URL</code> near the top of the script). Ask your dad-assistant to generate the sheet + script when you're ready.</p>
+    </div>
+  </section>
+
+</div>
+
+<nav class="tabs">
+  <button data-tab="dojo" class="active"><span class="ic">⛩️</span>Dojo</button>
+  <button data-tab="flows"><span class="ic">🌀</span>Flows</button>
+  <button data-tab="sessions"><span class="ic">📜</span>Week</button>
+  <button data-tab="grown"><span class="ic">⚙️</span>Grown-ups</button>
+</nav>
+
+<div class="scrim" id="scrim"><div class="sheet" id="sheet"></div></div>
+<div id="toast"></div>
+
+<script>
+"use strict";
+
+/* ============================================================
+   THE WILD DOJO  — Animal Flow program for Colin (age 11, climber)
+   Single-file, offline, no dependencies. Progress saved locally.
+   To add Google Sheet sync later, set SHEET_WEBAPP_URL below.
+   ============================================================ */
+const SHEET_WEBAPP_URL = ""; // paste your deployed Apps Script web-app URL here later
+
+/* ---------- DATA: styles + forms ----------
+   Each form: id, num, title (themed), move (plain), trains, cue, target, type, master (practices to master) */
+const STYLES = [
+  { id:"bear", animal:"🐻", name:"Boulder Breathing", way:"Way of the Bear", color:"var(--bear)",
+    trains:"Shoulders, wrists & a rock-solid core. The foundation of every style.",
+    forms:[
+      {num:1,title:"Stone Stance",move:"Beast hold (knees hover 1 inch)",type:"hold",target:"Hold 20–30 sec × 3",master:3,
+        trains:"Shoulder stability + deep core that resists arching.",
+        cue:"<b>Stack shoulders over hands</b>, soft elbows, knees hover an inch off the floor, flat back. Brace your belly like you're about to be poked."},
+      {num:2,title:"Boulder March",move:"Beast hold shoulder taps",type:"reps",target:"8–10 taps each side × 3",master:4,
+        trains:"Anti-rotation — staying still while one hand moves.",
+        cue:"From Stone Stance, slowly tap one shoulder. <b>Keep hips dead level</b> — don't let them wobble. Don't sink into the standing arm."},
+      {num:3,title:"Rolling Stone",move:"Beast crawl (forward & back)",type:"reps",target:"5 steps fwd + back × 3",master:5,
+        trains:"Moving with control under load.",
+        cue:"Tiny steps, opposite hand & foot. Keep the beast <b>low and quiet</b> — soft elbows, no bouncing."},
+      {num:4,title:"Earthshaker",move:"Lateral beast crawl",type:"reps",target:"Travel left & right × 3",master:5,
+        trains:"Stable shoulders moving sideways.",
+        cue:"Crawl sideways staying low and level. Hands take the load — soft elbows the whole way."},
+      {num:5,title:"Avalanche",move:"Loaded beast crawl + reach combo",type:"reps",target:"Crawl, freeze, reach × 3",master:6,
+        trains:"Mastery: control the beast in every direction.",
+        cue:"Crawl, freeze in a perfect Stone Stance, reach one hand forward, hold, switch. Strong and silent."},
+    ]},
+  { id:"crab", animal:"🦀", name:"Tide Breathing", way:"Way of the Crab", color:"var(--crab)",
+    trains:"Backside strength, hips & shoulders that work in reverse.",
+    forms:[
+      {num:1,title:"Low Tide",move:"Crab hold (hips lifted)",type:"hold",target:"Hold 20–30 sec × 3",master:3,
+        trains:"Wakes the glutes & shoulders, opens the front.",
+        cue:"Hands behind you — <b>point fingers out to the sides</b> if your wrists complain. Drive hips up to a tabletop, squeeze your bottom, soft elbows. Press the floor away — don't sag."},
+      {num:2,title:"Tidal Reach",move:"Crab reach",type:"reps",target:"6 each side × 3",master:4,
+        trains:"The signature crab move: rotate & reach with control.",
+        cue:"Lift hips, reach the opposite hand up and over toward the sky, then lower slow. Eyes follow the hand."},
+      {num:3,title:"Undertow",move:"Crab travel",type:"reps",target:"5 steps each way × 3",master:5,
+        trains:"Coordination travelling on your hands & feet.",
+        cue:"Walk in your crab — hand, foot, hand, foot. Keep hips up the whole way."},
+      {num:4,title:"Whirlpool",move:"Continuous crab reach flow",type:"reps",target:"8 reaches each side, flowing",master:5,
+        trains:"Smooth, non-stop reaching.",
+        cue:"Flow side to side without putting your bottom down. Slow and powerful beats fast and floppy."},
+      {num:5,title:"Riptide",move:"Crab travel + reach combo",type:"reps",target:"Travel + reach, both ways × 3",master:6,
+        trains:"Mastery: travel and reach woven together.",
+        cue:"Crab a few steps, drop a reach, crab back. Keep the hips high the entire time."},
+    ]},
+  { id:"ape", animal:"🦍", name:"Gale Breathing", way:"Way of the Ape", color:"var(--ape)",
+    trains:"Hips, ankles & spine that move freely — but under control.",
+    forms:[
+      {num:1,title:"Still Air",move:"Ape squat hold",type:"hold",target:"Hold 30 sec",master:3,
+        trains:"Deep hip & ankle mobility (great for climbing).",
+        cue:"Drop into a deep squat, hands on the floor, chest tall. <b>Don't force it</b> — go to a depth you control."},
+      {num:2,title:"Updraft",move:"Ape reach (reach up & twist)",type:"reps",target:"6 each side",master:4,
+        trains:"Twisting through the upper back.",
+        cue:"From the squat, reach one arm to the sky and twist open. <b>Control the twist</b> — don't crank it."},
+      {num:3,title:"Sidewind",move:"Ape lateral travel",type:"reps",target:"4 each side × 3",master:5,
+        trains:"Power and shoulder load moving sideways.",
+        cue:"Plant both hands first, then swing both feet to one side. Hands take the weight — soft elbows."},
+      {num:4,title:"Crosswind",move:"Ape travel + reach combo",type:"reps",target:"4 each side × 3",master:5,
+        trains:"Linking travel with a reach.",
+        cue:"Ape sideways, then add an Updraft reach at the end. Smooth handoff between the two."},
+      {num:5,title:"Cyclone",move:"Continuous ape travel flow",type:"reps",target:"6 travels, flowing",master:6,
+        trains:"Mastery: non-stop springy travel.",
+        cue:"Keep moving side to side like the wind. Land soft every time."},
+    ]},
+  { id:"crane", animal:"🦩", name:"Crane Breathing", way:"Way of the Crane", color:"var(--crane)",
+    trains:"Balance, single-leg strength & a long, controlled spine.",
+    forms:[
+      {num:1,title:"One-Leg Root",move:"Single-leg balance hold",type:"hold",target:"20 sec each side",master:3,
+        trains:"Knee & hip stability on one leg.",
+        cue:"Stand tall on one foot. <b>Soft knee — don't lock it.</b> Grip the floor with your toes, pick a spot to stare at."},
+      {num:2,title:"Heron Reach",move:"Single-leg reach (airplane)",type:"reps",target:"6 each side",master:4,
+        trains:"Hinging at the hip while staying steady.",
+        cue:"Balance on one leg, tip forward with a long flat back, arms like wings. Stand back up with control."},
+      {num:3,title:"Scorpion Tail",move:"Scorpion reach",type:"reps",target:"5 each side",master:5,
+        trains:"Controlled rotation + hip mobility.",
+        cue:"From a beast or plank, sweep one leg up and across behind you. <b>Turn from the hip</b> — don't crunch your low back."},
+      {num:4,title:"Crane's Wing",move:"Single-leg deadlift (bodyweight)",type:"reps",target:"6 each side",master:5,
+        trains:"Backside strength + balance together.",
+        cue:"Slow tip-and-return on one leg, hips square. Quality over speed."},
+      {num:5,title:"Sky Dancer",move:"Balance flow combo",type:"reps",target:"Chain 3 balances each side",master:6,
+        trains:"Mastery: stringing balances together.",
+        cue:"Move Root → Reach → Wing without putting the foot down. Wobble = still counts, keep breathing."},
+    ]},
+  { id:"flow", animal:"⚡", name:"Lightning Breathing", way:"Way of the Flow", color:"var(--flow)",
+    trains:"The switches that turn moves into flows — speed, rhythm, rotation.",
+    forms:[
+      {num:1,title:"Spark",move:"Front kickthrough",type:"reps",target:"5 each side",master:3,
+        trains:"Sending a leg through the front with control.",
+        cue:"From the beast, kick one leg under and through to the front, tap, return. Weight in your hands + one foot. Soft elbows."},
+      {num:2,title:"Flash Step",move:"Side kickthrough",type:"reps",target:"5 each side",master:4,
+        trains:"Opening the body to the side.",
+        cue:"Kick a leg out to the side and open your hips to the ceiling, then close back. Stay smooth."},
+      {num:3,title:"Thunderclap",move:"Underswitch",type:"reps",target:"4 each side",master:5,
+        trains:"The big switch — beast to crab and back.",
+        cue:"Rotate underneath yourself from beast to crab and return. <b>Control the turn</b>, don't flop."},
+      {num:4,title:"Chain Lightning",move:"Two switches linked",type:"reps",target:"4 links each side",master:5,
+        trains:"Connecting two switches with no pause.",
+        cue:"Spark into Thunderclap, or Flash Step into Spark. One leads into the next."},
+      {num:5,title:"Storm Dance",move:"3-move free flow",type:"reps",target:"Flow for 30 sec",master:6,
+        trains:"Mastery: your own short flow.",
+        cue:"Pick any three switches and keep moving for 30 seconds. Make it yours — that's the whole point."},
+    ]},
+];
+
+/* Bonus hidden path — climbing crossover */
+const IRON = { id:"iron", animal:"🧗", name:"Iron Grip", way:"Hidden Path · Climbing", color:"var(--iron)",
+  trains:"Active grip & shoulder strength for the wall.",
+  forms:[
+    {num:1,title:"Iron Hold",move:"Active dead hang",type:"hold",target:"10–15 sec × 3",master:3,
+      trains:"Hanging with the shoulders switched ON.",
+      cue:"Grab the bar and <b>pull your shoulders down</b> — don't just hang loose on your joints. Stay tight and active."},
+    {num:2,title:"Iron Pull",move:"Scapular pulls",type:"reps",target:"6 reps × 3",master:4,
+      trains:"Shoulder-blade control — key for climbing.",
+      cue:"From the hang, shrug your shoulders down without bending your arms. Small move, big payoff."},
+    {num:3,title:"Iron Will",move:"Longer active hang",type:"hold",target:"20 sec active",master:5,
+      trains:"Mastery: longer, still fully engaged.",
+      cue:"Hold the active hang longer. The second it goes loose and saggy, drop down and rest."},
+  ]};
+
+const ALL_STYLES = [...STYLES, IRON];
+
+/* ---------- FLOWS (unlock by mastering required forms) ---------- */
+const FLOWS = [
+  { id:"f_firststrike", icon:"🐻⚡", name:"First Strike", req:["bear-1","flow-1"],
+    desc:"Stone Stance → Spark (front kickthrough) → return. Your very first flow." },
+  { id:"f_wildcat", icon:"🦍⚡", name:"Wildcat Flow", req:["ape-2","flow-2"],
+    desc:"Ape reach → Flash Step (side kickthrough) → reach again. Springy and quick." },
+  { id:"f_tidalspin", icon:"🦀🌀", name:"Tidal Spin", req:["tide-2","flow-3"],
+    desc:"Crab reach → Underswitch → Beast → flow back. The classic beast-and-crab loop." },
+  { id:"f_skyhunter", icon:"🦩🦍", name:"Sky Hunter", req:["crane-3","ape-3"],
+    desc:"Scorpion reach → ape travel → balance. Rotation, power and control." },
+  { id:"f_master", icon:"🐉", name:"Master's Flow", req:["bear-3","crab-3","ape-3","crane-3","flow-3"],
+    desc:"One technique from every style, woven into one. The dojo's ultimate flow." },
+];
+
+/* ---------- RANKS ---------- */
+const RANKS = [
+  {name:"Sprout", abbr:"Sprt", xp:0},
+  {name:"Cub", abbr:"Cub", xp:150},
+  {name:"Tracker", abbr:"Trkr", xp:400},
+  {name:"Hunter", abbr:"Hunt", xp:750},
+  {name:"Warrior", abbr:"Wrr", xp:1200},
+  {name:"Shadow", abbr:"Shdw", xp:1800},
+  {name:"Master", abbr:"Mstr", xp:2600},
+  {name:"Apex", abbr:"Apex", xp:3600},
+];
+
+const XP = { practice:10, masterForm:50, daily:15, masterStyle:100, flow:75 };
+
+/* ============================================================
+   STATE + STORAGE (localStorage with in-memory fallback so it
+   still runs inside sandboxes that block storage)
+   ============================================================ */
+const KEY = "wildDojoState.v1";
+let memFallback = null;
+function rawGet(){ try{ return localStorage.getItem(KEY); }catch(e){ return memFallback; } }
+function rawSet(v){ try{ localStorage.setItem(KEY,v); }catch(e){ memFallback = v; } }
+
+function freshState(){
+  return { practice:{}, mastered:{}, flows:{}, lastPracticed:{}, streak:0, longest:0, lastDay:null,
+           rankSeen:0, created:new Date().toISOString() };
+}
+let S = load();
+function load(){
+  const r = rawGet();
+  if(!r) return freshState();
+  try{ return Object.assign(freshState(), JSON.parse(r)); }catch(e){ return freshState(); }
+}
+function save(){ rawSet(JSON.stringify(S)); }
+
+/* ---------- helpers ---------- */
+function findForm(fid){
+  const [sid,n] = fid.split("-");
+  const st = ALL_STYLES.find(s=>s.id===sid);
+  return st ? st.forms.find(f=>f.num==n) : null;
+}
+function formState(sid, num){
+  const fid = sid+"-"+num;
+  if(S.mastered[fid]) return "mastered";
+  if(num<=2) return "open";            // first two forms always open for variety
+  return S.mastered[sid+"-"+(num-1)] ? "open" : "locked";
+}
+function totalXP(){
+  let xp = 0;
+  for(const k in S.practice) xp += (S.practice[k]||0)*XP.practice;
+  xp += Object.keys(S.mastered).length*XP.masterForm;
+  // style mastery bonus
+  for(const st of ALL_STYLES){
+    if(st.forms.every(f=>S.mastered[st.id+"-"+f.num])) xp += XP.masterStyle;
+  }
+  xp += Object.keys(S.flows).length*XP.flow;
+  xp += (S.dailyCount||0)*XP.daily;
+  return xp;
+}
+function rankFor(xp){
+  let r = RANKS[0];
+  for(const rk of RANKS) if(xp>=rk.xp) r=rk;
+  return r;
+}
+function nextRank(xp){
+  for(const rk of RANKS) if(xp<rk.xp) return rk;
+  return null;
+}
+function todayStr(){ const d=new Date(); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); }
+function yesterdayStr(){ const d=new Date(Date.now()-86400000); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); }
+
+/* move of the week: stable within a week, but only from moves he can actually do */
+function weekIndex(){
+  const d=new Date(); const start=new Date(d.getFullYear(),0,1);
+  return Math.floor((d-start)/(7*86400000));
+}
+function moveOfWeek(){
+  const avail=[];
+  STYLES.forEach(s=>s.forms.forEach(f=>{ if(formState(s.id,f.num)==="open") avail.push({s,f}); }));
+  let pool=avail.filter(x=>x.f.type==="reps");   // prefer dynamic moves — more fun than a hold
+  if(!pool.length) pool=avail;                    // else any unlocked, unmastered move
+  if(!pool.length) STYLES.forEach(s=>s.forms.forEach(f=>pool.push({s,f}))); // safety net
+  return pool[weekIndex()%pool.length];
+}
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+function renderSeal(){
+  const xp=totalXP(), r=rankFor(xp), nx=nextRank(xp);
+  const frac = nx ? (xp - r.xp)/(nx.xp - r.xp) : 1;
+  const C=2*Math.PI*32;
+  document.getElementById("seal").innerHTML =
+    `<svg width="74" height="74" viewBox="0 0 74 74">
+       <circle cx="37" cy="37" r="32" fill="none" stroke="#262b36" stroke-width="6"/>
+       <circle cx="37" cy="37" r="32" fill="none" stroke="url(#g)" stroke-width="6"
+         stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C*(1-frac)}"
+         transform="rotate(-90 37 37)"/>
+       <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+         <stop offset="0" stop-color="#FF7A3C"/><stop offset="1" stop-color="#F7411E"/>
+       </linearGradient></defs>
+     </svg><div class="rank-abbr">${r.abbr}</div>`;
+  document.getElementById("rankName").textContent = r.name;
+  document.getElementById("xpLine").textContent = nx ? `${xp} XP · ${nx.xp-xp} to ${nx.name}` : `${xp} XP · max rank!`;
+}
+
+function renderStreak(){
+  const f=document.getElementById("flame");
+  const doneToday = S.lastDay===todayStr();
+  document.getElementById("streakNum").textContent = S.streak;
+  f.classList.toggle("dim", S.streak===0 || (!doneToday && S.lastDay!==yesterdayStr()));
+  f.style.transform = "scale("+(1+Math.min(S.streak,14)*0.05)+")";
+  const sub=document.getElementById("streakSub");
+  const btn=document.getElementById("focusBtn");
+  if(doneToday){ sub.textContent="Done today. Come back tomorrow to keep the flame alive! 🔥"; btn.disabled=true; btn.textContent="✓ Done"; }
+  else { sub.textContent = S.streak>0 ? "Keep the streak going — do today's Total Focus." : "Do your Total Focus to light the flame."; btn.disabled=false; btn.textContent="Total Focus"; }
+}
+
+function renderMOTW(){
+  const m=moveOfWeek();
+  const el=document.getElementById("motw");
+  el.style.cursor="pointer";
+  el.innerHTML=`<div class="fi">${m.s.animal}</div>
+     <div style="flex:1">
+       <div class="fname">${m.f.title}</div>
+       <div class="fdesc">${m.s.way} · ${m.f.move}</div>
+     </div><span class="badge open">Focus</span>`;
+  el.onclick=()=>openForm(m.s,m.f);
+}
+
+function renderStyles(){
+  const g=document.getElementById("styleGrid");
+  g.innerHTML="";
+  ALL_STYLES.forEach(st=>{
+    const masteredN = st.forms.filter(f=>S.mastered[st.id+"-"+f.num]).length;
+    const all = masteredN===st.forms.length;
+    const card=document.createElement("button");
+    card.className="style-card";
+    card.style.setProperty("--accent", st.color);
+    card.innerHTML=`
+      <div class="animal">${st.animal}</div>
+      <div class="sname">${st.name}</div>
+      <div class="way">${st.way}</div>
+      <div class="trains">${st.trains}</div>
+      <div class="pips">${st.forms.map(f=>`<span class="pip ${S.mastered[st.id+"-"+f.num]?"done":""}"></span>`).join("")}</div>
+      <div class="count ${all?"crest-done":""}">${all?"★ Style mastered!":masteredN+" / "+st.forms.length+" forms mastered"}</div>`;
+    card.onclick=()=>openStyle(st);
+    g.appendChild(card);
+  });
+}
+
+function renderFlows(){
+  const list=document.getElementById("flowList");
+  list.innerHTML="";
+  FLOWS.forEach(fl=>{
+    const ready = fl.req.every(r=>S.mastered[r]);
+    const got = !!S.flows[fl.id];
+    const card=document.createElement("div");
+    card.className="flow-card"+(ready||got?"":" locked");
+    card.style.setProperty("--accent","var(--flow)");
+    const reqNames = fl.req.map(r=>{const f=findForm(r);return f?f.title:r;}).join(", ");
+    let badge = got?`<span class="badge got">★ Unlocked</span>`
+              : ready?`<span class="badge open">Ready!</span>`
+              : `<span class="badge">Locked</span>`;
+    card.innerHTML=`<div class="fi">${fl.icon}</div>
+      <div style="flex:1">
+        <div class="fname">${fl.name}</div>
+        <div class="fdesc">${fl.desc}</div>
+        <div class="fdesc" style="margin-top:4px;opacity:.8">Needs: ${reqNames}</div>
+      </div>${badge}`;
+    if(ready && !got){ card.style.cursor="pointer"; card.onclick=()=>{ S.flows[fl.id]=todayStr(); save(); toast("🐉 Flow unlocked: "+fl.name+"!"); logRow("FLOW", fl.name, "unlocked"); refresh(); }; }
+    list.appendChild(card);
+  });
+}
+
+function renderWeek(){
+  const days=[["Sun","Rest","rest"],["Mon","Focus","focus"],["Tue","Train","train"],
+    ["Wed","Climb","climb"],["Thu","Focus","focus"],["Fri","Focus","focus"],["Sat","Train","train"]];
+  const today=new Date().getDay();
+  document.getElementById("weekStrip").innerHTML=days.map((d,i)=>
+    `<div class="day ${d[2]} ${i===today?'':''}" style="${i===today?'outline:2px solid var(--ember-a);outline-offset:1px':''}">
+       <div class="dn">${d[0]}</div><div class="dt">${d[1]}</div></div>`).join("");
+
+  document.getElementById("sessionPlans").innerHTML=`
+    <div class="scroll">
+      <span class="tag">Every day · ~5 min</span>
+      <h3>Total Focus Ritual</h3>
+      <ol>
+        <li>Mountain Set — wrist circles & presses, slow.</li>
+        <li>Three deep belly breaths. In through the nose, long slow out.</li>
+        <li>Practice this week's <b>Move of the Week</b> — 1–2 easy sets.</li>
+        <li>Tap <b>Total Focus</b> on the Dojo screen to light your flame.</li>
+      </ol>
+    </div>
+    <div class="scroll">
+      <span class="tag">Tuesday &amp; Saturday · ~15–20 min</span>
+      <h3>Training Session</h3>
+      <p style="margin:6px 0"><span class="when">Warm-up</span></p>
+      <ul><li>Mountain Set — wrist circles &amp; presses (this is your warm-up, not a form to chase).</li><li>Stone Stance + Low Tide — wake up the shoulders.</li></ul>
+      <p style="margin:10px 0 0"><span class="when">Main</span></p>
+      <ul><li>Pick <b>3 different animals</b> and work each one's current Form — variety beats grinding one move. Start with this week's Move of the Week.</li><li>Quality first — soft elbows, stacked joints, no sinking.</li></ul>
+      <p style="margin:10px 0 0"><span class="when">Flow</span></p>
+      <ul><li>Practice your newest unlocked Flow, or drill a kickthrough (Spark / Flash Step) or the Underswitch.</li></ul>
+      <p style="margin:10px 0 0"><span class="when">Finisher</span></p>
+      <ul><li>Iron Grip — one active-hang form for the wall.</li></ul>
+    </div>
+    <div class="scroll">
+      <span class="tag">Wednesday</span>
+      <h3>Climbing Day</h3>
+      <ul><li>Go climb! 🧗</li><li>Bonus: a few Total Focus breaths before a hard route to stay calm and braced.</li></ul>
+    </div>`;
+}
+
+/* ---------- modals ---------- */
+const scrim=document.getElementById("scrim"), sheet=document.getElementById("sheet");
+function openSheet(){ scrim.classList.add("open"); }
+function closeSheet(){ scrim.classList.remove("open"); }
+scrim.addEventListener("click",e=>{ if(e.target===scrim) closeSheet(); });
+
+function openStyle(st){
+  let rows="";
+  st.forms.forEach(f=>{
+    const stt=formState(st.id,f.num);
+    const fid=st.id+"-"+f.num;
+    const pc=S.practice[fid]||0;
+    const pips=Array.from({length:f.master},(_,i)=>`<i class="${i<pc?'on':''}"></i>`).join("");
+    const icon = stt==="mastered"?"⭐":stt==="locked"?"🔒":"▶️";
+    rows+=`<div class="formrow ${stt==='locked'?'locked':''}" data-form="${fid}">
+      <div class="fnum">F${f.num}</div>
+      <div style="flex:1">
+        <div class="ftitle">${f.title}</div>
+        <div class="fmeta">${f.move}</div>
+        ${stt!=='locked'?`<div class="mini-pips">${pips}</div>`:`<div class="fmeta">Master the form before this to unlock</div>`}
+      </div><div class="state">${icon}</div></div>`;
+  });
+  sheet.innerHTML=`<button class="close" aria-label="Close">×</button>
+    <div class="eyebrow" style="color:${st.color}">${st.way}</div>
+    <h2>${st.animal} ${st.name}</h2>
+    <div class="real">${st.trains}</div>
+    <div class="formlist">${rows}</div>`;
+  sheet.style.setProperty("--accent", st.color);
+  sheet.querySelector(".close").onclick=closeSheet;
+  sheet.querySelectorAll(".formrow:not(.locked)").forEach(r=>{
+    r.onclick=()=>{ const f=st.forms.find(x=>st.id+"-"+x.num===r.dataset.form); openForm(st,f); };
+  });
+  openSheet();
+}
+
+function openForm(st,f){
+  const fid=st.id+"-"+f.num;
+  const pc=S.practice[fid]||0;
+  const done=!!S.mastered[fid];
+  const trainedToday=!!(S.lastPracticed && S.lastPracticed[fid]===todayStr());
+  const frac=Math.min(pc/f.master,1);
+  sheet.innerHTML=`<button class="close" aria-label="Close">×</button>
+    <div class="fd">
+      <div class="eyebrow" style="color:${st.color}">${st.way} · Form ${f.num}</div>
+      <h2>${f.title}</h2>
+      <div class="real">Real move: ${f.move} — ${f.trains}</div>
+      <div class="cue">${f.cue}</div>
+      <div class="target"><div>Target<b>${f.target}</b></div><div>Type<b>${f.type==='hold'?'Hold':'Reps'}</b></div></div>
+      <div class="progress">
+        <div class="bar"><span style="width:${frac*100}%"></span></div>
+        <div class="fmeta" style="margin-top:6px;font-size:12px;color:var(--text-dim)">${done?'Mastered ⭐':pc+' / '+f.master+' days to master'}</div>
+      </div>
+      ${done?`<div class="mastered-note">⭐ Form Mastered</div>`
+        : trainedToday?`<button class="practice-btn" disabled style="filter:grayscale(.65) brightness(.85);box-shadow:none">✓ Trained today — come back tomorrow</button>`
+        :`<button class="practice-btn">✓ I practiced this today</button>`}
+    </div>`;
+  sheet.style.setProperty("--accent", st.color);
+  sheet.querySelector(".close").onclick=closeSheet;
+  const pb=sheet.querySelector(".practice-btn");
+  if(pb && !pb.disabled) pb.onclick=()=>doPractice(st,f);
+  openSheet();
+}
+
+function doPractice(st,f){
+  const fid=st.id+"-"+f.num;
+  if(S.mastered[fid]) return;
+  if(!S.lastPracticed) S.lastPracticed={};
+  if(S.lastPracticed[fid]===todayStr()){ toast("Already trained today ✓ — come back tomorrow!"); return; }
+  S.lastPracticed[fid]=todayStr();
+  S.practice[fid]=(S.practice[fid]||0)+1;
+  logRow("PRACTICE", st.name+" / "+f.title, S.practice[fid]+"/"+f.master+" days");
+  let msg="+"+XP.practice+" XP · "+f.title+" ("+S.practice[fid]+"/"+f.master+")";
+  if(S.practice[fid]>=f.master && !S.mastered[fid]){
+    S.mastered[fid]=todayStr();
+    msg="⭐ MASTERED: "+f.title+"!  +"+XP.masterForm+" XP";
+    // style mastery?
+    if(st.forms.every(x=>S.mastered[st.id+"-"+x.num])) setTimeout(()=>toast("🏆 "+st.name+" fully mastered! +"+XP.masterStyle+" XP"),1400);
+  }
+  save();
+  toast(msg);
+  // rank-up check
+  const r=rankFor(totalXP());
+  if(S.rankSeen < RANKS.indexOf(r)){ S.rankSeen=RANKS.indexOf(r); save(); setTimeout(()=>toast("🎖️ New rank: "+r.name+"!"),1700); }
+  refresh();
+  openForm(st, f); // refresh the detail view in place
+}
+
+function doDaily(){
+  if(S.lastDay===todayStr()) return;
+  if(S.lastDay===yesterdayStr()) S.streak+=1; else S.streak=1;
+  S.lastDay=todayStr();
+  S.longest=Math.max(S.longest||0,S.streak);
+  S.dailyCount=(S.dailyCount||0)+1;
+  save();
+  logRow("FOCUS","Total Focus ritual","streak "+S.streak);
+  toast("🔥 Flame lit! "+S.streak+"-day streak. +"+XP.daily+" XP");
+  refresh();
+}
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg){
+  const t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("show");
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("show"),2300);
+}
+
+/* ---------- optional Google Sheet logging (no-op until URL set) ---------- */
+function logRow(kind, what, detail){
+  if(!SHEET_WEBAPP_URL) return;
+  try{
+    fetch(SHEET_WEBAPP_URL,{method:"POST",mode:"no-cors",
+      headers:{"Content-Type":"text/plain"},
+      body:JSON.stringify({ts:new Date().toISOString(),kind,what,detail,
+        streak:S.streak,xp:totalXP(),rank:rankFor(totalXP()).name})});
+  }catch(e){}
+}
+
+/* ---------- export / import / reset ---------- */
+function exportProgress(){
+  const blob=new Blob([JSON.stringify(S,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="wild-dojo-progress.json"; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function importProgress(file){
+  const r=new FileReader();
+  r.onload=()=>{ try{ S=Object.assign(freshState(),JSON.parse(r.result)); save(); toast("Progress loaded ✓"); refresh(); }
+    catch(e){ toast("Couldn't read that file."); } };
+  r.readAsText(file);
+}
+
+/* ---------- tabs ---------- */
+document.querySelectorAll("nav.tabs button").forEach(b=>{
+  b.onclick=()=>{
+    document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+    b.classList.add("active");
+    document.getElementById("view-"+b.dataset.tab).classList.add("active");
+    window.scrollTo({top:0,behavior:"smooth"});
+  };
+});
+
+/* ---------- wire grown-up buttons ---------- */
+document.getElementById("focusBtn").onclick=doDaily;
+document.getElementById("exportBtn").onclick=exportProgress;
+document.getElementById("importBtn").onclick=()=>document.getElementById("importFile").click();
+document.getElementById("importFile").onchange=e=>{ if(e.target.files[0]) importProgress(e.target.files[0]); };
+document.getElementById("resetBtn").onclick=()=>{ if(confirm("Reset ALL of Colin's progress? This can't be undone.")){ S=freshState(); save(); toast("Reset done."); refresh(); } };
+
+/* ---------- refresh all ---------- */
+function refresh(){
+  renderSeal(); renderStreak(); renderMOTW(); renderStyles(); renderFlows(); renderWeek();
+}
+refresh();
+</script>
+</body>
+</html>

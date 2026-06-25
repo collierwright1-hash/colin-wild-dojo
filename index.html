@@ -642,7 +642,7 @@ function renderFlows(){
 
 function renderWeek(){
   const days=[["Sun","Rest","rest"],["Mon","Focus","focus"],["Tue","Train","train"],
-    ["Wed","Climb","climb"],["Thu","Focus","focus"],["Fri","Focus","focus"],["Sat","Train","train"]];
+    ["Wed","Focus","focus"],["Thu","Climb","climb"],["Fri","Focus","focus"],["Sat","Train","train"]];
   const today=new Date().getDay();
   document.getElementById("weekStrip").innerHTML=days.map((d,i)=>
     `<div class="day ${d[2]} ${i===today?'':''}" style="${i===today?'outline:2px solid var(--ember-a);outline-offset:1px':''}">
